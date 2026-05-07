@@ -1,0 +1,32 @@
+[Defines]
+INF_VERSION     = 1.27
+BASE_NAME       = bootloader
+FILE_GUID       = 4638FEC9-F462-46DA-AED9-0B840FECDAC4
+MODULE_TYPE     = UEFI_APPLICATION
+VERSION_STRING  = 1.0
+ENTRY_POINT     = UefiMain
+
+
+[Sources]
+    bootloader.c
+
+[LibraryClasses]
+UefiLib
+UefiApplicationEntryPoint
+UefiBootServicesTableLib
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[Guids]
+gEfiFileInfoGuid
+[Ppis]
+
+[Protocols]
+gEfiSimpleFileSystemProtocolGuid
+gEfiLoadedImageProtocolGuid
+gEfiDevicePathProtocolGuid
+
+[FeaturePcd]
+
+[Pcd]
