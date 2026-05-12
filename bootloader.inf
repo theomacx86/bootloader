@@ -8,10 +8,11 @@ ENTRY_POINT     = UefiMain
 
 
 [Sources]
-    bootloader.c
+    Src/bootloader.c
 
 [LibraryClasses]
 UefiLib
+PrintLib
 UefiApplicationEntryPoint
 UefiBootServicesTableLib
 
